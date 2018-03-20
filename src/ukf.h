@@ -37,6 +37,9 @@ public:
   // R_radar
   MatrixXd R_radar_;
 
+  // H_lidar
+  MatrixXd H_;
+
   ///* time when the state is true, in us
   long long time_us_;
 
@@ -90,7 +93,7 @@ public:
   /**
    * Angle Normalization to [-pi,pi]
    */
-  void NormAng(double *ang);
+  void NormAng(double ang);
 
   /**
    * ProcessMeasurement
